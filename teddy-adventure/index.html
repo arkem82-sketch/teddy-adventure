@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Teddy's Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Cinzel+Decorative:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Full-bleed game stage: one letterboxed canvas, deliberately dark single theme */
+      :root {
+        --stage: #141a20;
+        --ink: #f2e6cc;
+        color-scheme: dark;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        height: 100%;
+        background: var(--stage);
+        color: var(--ink);
+        overflow: hidden;
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        display: block;
+        outline: none;
+      }
+      canvas:focus-visible {
+        outline: 2px solid #e0b070;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="c" tabindex="0" aria-label="Teddy's Adventure game"></canvas>
+    <script src="js/meta.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
